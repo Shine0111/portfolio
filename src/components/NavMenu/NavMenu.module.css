@@ -1,0 +1,15 @@
+.menu-urls-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.menu-urls-container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
