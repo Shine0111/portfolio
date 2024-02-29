@@ -2,12 +2,15 @@ import useViewport from "../../hooks/useViewport";
 import styles from "./NavBar.module.css";
 import classNames from "classnames";
 import NavMenu from "../NavMenu/NavMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 
 function NavBar() {
   const { viewWidth, breakpoint } = useViewport();
   const [isMenu, setIsMenu] = useState(false);
+  useEffect(() => {
+    if (viewWidth > breakpoint) setIsMenu(true);
+  }, [viewWidth, breakpoint]);
   const handleMenuButton = () => {
     setIsMenu(!isMenu);
   };
