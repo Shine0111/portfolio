@@ -8,6 +8,11 @@ function HomePage() {
         Hi, my <br /> name is <span className={styles.name}>Shine</span>
         <span className={styles.styledPoint}>.</span>
       </h1>
+      <h2 className={styles.description}>
+        I'm a <span className={styles.role}>front-end developer</span>
+        <span className={styles.styledPoint}>.</span> I build awesome websites{" "}
+        <br /> and bring creative ideas to life on the web and on mobiles.
+      </h2>
     </div>
   );
 }

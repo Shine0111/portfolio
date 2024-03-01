@@ -5,6 +5,7 @@
   font-weight: lighter;
   font-size: 100px;
   color: var(--black-light);
+  line-height: 90px;
 }
 .styled-point {
   color: var(--violet);
@@ -12,4 +13,16 @@
 .name {
   font-weight: bold;
   font-style: italic;
+}
+.description {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--black-light);
+}
+.role {
+  color: var(--blue);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.role::selection {
+  background-color: black 60px 10px;
 }
