@@ -5,10 +5,11 @@
 }
 
 .menu-urls-container-mobile {
+  position: absolute;
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 2rem;
   margin: 0;
-  padding: 0;
-  margin: 1rem;
+  background: rgba(0, 0, 0, 0.5);
 }

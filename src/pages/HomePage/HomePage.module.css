@@ -1,0 +1,15 @@
+.container {
+  padding: var(--container-padding);
+}
+.hero-title {
+  font-weight: lighter;
+  font-size: 100px;
+  color: var(--black-light);
+}
+.styled-point {
+  color: var(--violet);
+}
+.name {
+  font-weight: bold;
+  font-style: italic;
+}

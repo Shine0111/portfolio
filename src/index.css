@@ -1,17 +1,28 @@
 :root {
   padding: 0%;
+  --blue-light: #90fcf9;
+  --blue: #63b4d1;
+  --blue-dark: #7699d4;
+  --violet: #9448bc;
+  --violet-dark: #480355;
+  --black-light: #414a4c;
+  --container-padding: 0.8rem;
 }
-
+::selection {
+  background-color: var(--blue-light);
+}
 body {
   margin: 0;
 }
 
 .container-max-width {
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 li {
   list-style: none;
+  color: black;
 }
 
 a {

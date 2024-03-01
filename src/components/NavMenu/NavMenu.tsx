@@ -6,7 +6,7 @@ interface Props {
 
 const NavMenu = ({ mobile }: Props) => {
   return (
-    <>
+    <div>
       <ul
         className={
           mobile ? styles.menuUrlsContainerMobile : styles.menuUrlsContainer
@@ -25,7 +25,7 @@ const NavMenu = ({ mobile }: Props) => {
           <li>CONTACT</li>
         </a>
       </ul>
-    </>
+    </div>
   );
 };
 

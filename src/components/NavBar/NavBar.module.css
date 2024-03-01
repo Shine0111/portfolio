@@ -1,5 +1,6 @@
 .header {
   background: #e5e5e5;
+  position: relative;
 }
 .navbar-container {
   display: flex;
@@ -12,4 +13,5 @@
 .logoText {
   font-style: italic;
   font-weight: lighter;
+  letter-spacing: 1.5px;
 }

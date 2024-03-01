@@ -1,0 +1,6 @@
+Ice blue: #90FCF9;
+Aero: #63B4D1;
+Vista Blue: #7699D4;
+Purpureus: #9448BC;
+Russian Violet: #480355;
+Outer Space Black: #414A4C;
