@@ -1,0 +1,18 @@
+.container {
+  background: var(--black-light);
+}
+.footer-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+}
+.footer-footer p {
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+}
+.signature {
+  width: 100px;
+}
