@@ -3,7 +3,7 @@ import styles from "./HomePage.module.css";
 
 function HomePage() {
   return (
-    <div className={classNames("container-max-width", styles.container)}>
+    <div className={classNames("hero-container-max-width", styles.container)}>
       <h1 className={styles.heroTitle}>
         Hi, my <br /> name is <span className={styles.name}>Shine</span>
         <span className={styles.styledPoint}>.</span>

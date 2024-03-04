@@ -20,6 +20,10 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
+.hero-container-max-width {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
 li {
   list-style: none;

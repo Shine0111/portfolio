@@ -8,16 +8,22 @@ import HamburgerButton from "../HamburgerButton/HamburgerButton";
 function NavBar() {
   const { viewWidth, breakpoint } = useViewport();
   const [isMenu, setIsMenu] = useState(false);
+
+  // Close mobile Menu when window width gets larger
   useEffect(() => {
     if (viewWidth > breakpoint) setIsMenu(true);
   }, [viewWidth, breakpoint]);
   const handleMenuButton = () => {
     setIsMenu(!isMenu);
   };
+
   return (
     <div className={styles.header}>
       <div
-        className={classNames(styles.navbarContainer, "container-max-width")}
+        className={classNames(
+          styles.navbarContainer,
+          "hero-container-max-width"
+        )}
       >
         <h2 className={styles.logoText}>Shine Randriamialison</h2>
         {viewWidth >= breakpoint && <NavMenu />}
