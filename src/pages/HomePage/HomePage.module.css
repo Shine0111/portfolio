@@ -1,5 +1,21 @@
 .container {
   padding: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media only screen and (min-width: 769px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .svg-container {
+    flex: 1;
+  }
+  .hero-title {
+    margin: 0;
+  }
 }
 .hero-title {
   font-weight: lighter;
