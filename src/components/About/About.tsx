@@ -4,7 +4,7 @@ import classNames from "classnames";
 const About = () => {
   return (
     <div className={classNames("container-max-width", styles.container)}>
-      About Me <br />
+      <h1 className="italic-title">About Me</h1> <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aut
         corrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur,

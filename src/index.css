@@ -28,6 +28,13 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+.italic-title {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 55px;
+  color: var(--black-light);
+  margin: 0rem;
+}
 
 li {
   list-style: none;
