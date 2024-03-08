@@ -4,6 +4,11 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media only screen and (min-width: 769px) {
   .container {
     display: flex;
@@ -33,7 +38,7 @@
   font-style: italic;
 }
 .description {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 500;
   color: var(--black-light);
 }

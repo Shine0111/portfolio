@@ -9,7 +9,7 @@ function HomePage() {
   const roles = ["front-end developer", "javascript developer"];
   return (
     <div className={classNames("hero-container-max-width", styles.container)}>
-      <div>
+      <div className={styles.heroTextContainer}>
         <h1 className={styles.heroTitle}>
           Hi, my <br /> name is <span className={styles.name}>Shine</span>
           <span className={styles.styledPoint}>.</span>

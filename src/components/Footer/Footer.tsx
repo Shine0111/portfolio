@@ -10,11 +10,7 @@ const Footer = () => {
           <p>
             This website is designed and developed by <i>me,</i>
           </p>
-          <img
-            src={signature}
-            alt="Shine Signature"
-            className={styles.signature}
-          />
+          <img src={signature} alt="Shine" className={styles.signature} />
         </div>
       </div>
     </div>
