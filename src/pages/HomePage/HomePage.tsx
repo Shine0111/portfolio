@@ -4,6 +4,7 @@ import useViewport from "../../hooks/useViewport";
 import GlitchText from "../../components/GlicthText/GlitchText";
 import heroImage from "../../assets/portfolio-hero-v1.svg";
 import About from "../../components/About/About";
+import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 
 function HomePage() {
   const { viewWidth } = useViewport();
@@ -34,6 +35,7 @@ function HomePage() {
         )}
       </div>
       <About />
+      <ProjectsSection />
     </>
   );
 }

@@ -7,3 +7,8 @@
     margin: 5rem;
   }
 }
+p {
+  font-family: "kanit", sans-serif;
+  font-weight: 400;
+  color: var(--black-light);
+}
