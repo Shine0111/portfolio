@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import styles from "./Footer.module.css";
+import signature from "../../assets/shine_sign.png";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
             This website is designed and developed by <i>me,</i>
           </p>
           <img
-            src="src\assets\shine_sign.png"
+            src={signature}
             alt="Shine Signature"
             className={styles.signature}
           />
