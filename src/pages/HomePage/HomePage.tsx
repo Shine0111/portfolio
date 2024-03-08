@@ -2,6 +2,7 @@ import classNames from "classnames";
 import styles from "./HomePage.module.css";
 import useViewport from "../../hooks/useViewport";
 import GlitchText from "../../components/GlicthText/GlitchText";
+import heroImage from "src/assets/portfolio-hero-v1.svg";
 
 function HomePage() {
   const { viewWidth } = useViewport();
@@ -25,7 +26,7 @@ function HomePage() {
       </div>
       {viewWidth > 1120 && (
         <div className={styles.svgContainer}>
-          <img src="src\assets\portfolio-hero-v1.svg" alt="hero" />
+          <img src={heroImage} alt="hero" />
         </div>
       )}
     </div>
