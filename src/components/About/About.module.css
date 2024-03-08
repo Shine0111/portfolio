@@ -1,0 +1,9 @@
+.container {
+  border-left: solid 0.5mm var(--black-light);
+  padding: var(--container-padding);
+}
+@media (max-width: 1430px) {
+  .container {
+    margin: 5rem;
+  }
+}
