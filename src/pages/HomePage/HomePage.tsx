@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./HomePage.module.css";
 import useViewport from "../../hooks/useViewport";
 import GlitchText from "../../components/GlicthText/GlitchText";
-import heroImage from "src/assets/portfolio-hero-v1.svg";
+import heroImage from "../../assets/portfolio-hero-v1.svg";
 
 function HomePage() {
   const { viewWidth } = useViewport();
