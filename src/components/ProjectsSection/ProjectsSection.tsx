@@ -10,11 +10,6 @@ const ProjectsSection = () => {
   ];
   return (
     <div className={classNames("container-max-width-wider", styles.container)}>
-      <img
-        src={placeholderImage}
-        alt="placeholder image"
-        className={styles.projectEntryImage}
-      />
       {projects.map((project) => (
         <img
           key={project.title}
