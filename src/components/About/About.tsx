@@ -1,9 +1,14 @@
+import useViewport from "../../hooks/useViewport";
 import styles from "./About.module.css";
 import classNames from "classnames";
 
 const About = () => {
+  const { viewWidth, breakpoint } = useViewport();
+  const getContainerWidthClassName = () => {
+    viewWidth > breakpoint ? "container-max-width" : "";
+  };
   return (
-    <div className={classNames("container-max-width", styles.container)}>
+    <div className={classNames(getContainerWidthClassName, styles.container)}>
       <h1 className="italic-title">About Me</h1> <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aut
