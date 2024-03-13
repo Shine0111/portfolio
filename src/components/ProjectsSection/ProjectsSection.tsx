@@ -19,15 +19,27 @@ const ProjectsSection = () => {
 
   const projectsLoaded: { title: string; image: string }[] = getProjects();
   return (
-    <div className={classNames("container-max-width-wider", styles.container)}>
-      {projectsLoaded.map((project) => (
-        <img
-          key={project.title}
-          src={project.image}
-          alt={project.title}
-          className={styles.projectEntryImage}
-        />
-      ))}
+    <div className={classNames("container-max-width-wider")}>
+      <div className={styles.container}>
+        {projectsLoaded.map((project) => (
+          <img
+            key={project.title}
+            src={project.image}
+            alt={project.title}
+            className={styles.projectEntryImage}
+          />
+        ))}
+      </div>
+      {viewWidth < breakpoint && (
+        <div className={styles.container}>
+          <img
+            key={projects[2].title}
+            src={projects[2].image}
+            alt={projects[2].title}
+            className={styles.projectEntryImage}
+          />
+        </div>
+      )}
     </div>
   );
 };
