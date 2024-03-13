@@ -4,12 +4,17 @@
   background-position-y: 100%;
   background-position-x: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-size: 90%;
 }
+
 .projectEntryImage {
   width: 10%;
   margin-bottom: 12%;
   margin-left: 2rem;
   margin-right: 2rem;
+  transition: width ease-in;
+}
+.projectEntryImage:hover {
+  cursor: pointer;
 }
