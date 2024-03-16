@@ -10,11 +10,34 @@
   --container-padding: 0.8rem;
 }
 
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(230, 230, 230, 0.7);
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--black-light);
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6d6d6d;
+}
+
 ::selection {
   background-color: var(--blue-light);
 }
 
 body {
+  scrollbar-color: red;
   margin: 0;
 }
 
