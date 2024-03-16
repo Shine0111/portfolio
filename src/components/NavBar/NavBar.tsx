@@ -4,9 +4,11 @@ import classNames from "classnames";
 import NavMenu from "../NavMenu/NavMenu";
 import { useEffect, useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
+import useScrollDetector from "../../hooks/useScrollDetector";
 
 function NavBar() {
   const { viewWidth, breakpoint } = useViewport();
+  const isScrolling = useScrollDetector();
   const [isMenu, setIsMenu] = useState(false);
 
   // Close mobile Menu when window width gets larger
@@ -17,8 +19,12 @@ function NavBar() {
     setIsMenu(!isMenu);
   };
 
+  const getStickyClassName = isScrolling ? "sticky" : "";
+
+  console.log(isScrolling);
+
   return (
-    <div className={styles.header}>
+    <div className={classNames(styles.header, getStickyClassName)}>
       <div
         className={classNames(
           styles.navbarContainer,
