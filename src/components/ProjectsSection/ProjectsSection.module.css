@@ -7,7 +7,21 @@
   justify-content: space-evenly;
   background-size: 90%;
 }
-
+@media (max-width: 1430px) {
+  .section-container {
+    margin: 5rem;
+    padding: var(--container-padding);
+  }
+}
+@media (max-width: 780px) {
+  .section-container {
+    margin: 1rem;
+  }
+}
+.subtitle {
+  text-align: right;
+  max-width: 70%;
+}
 .projectEntryImage {
   width: 10%;
   margin-bottom: 12%;

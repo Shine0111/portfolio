@@ -20,6 +20,26 @@ const ProjectsSection = () => {
   const projectsLoaded: { title: string; image: string }[] = getProjects();
   return (
     <div className={classNames("container-max-width-wider")}>
+      <div
+        className={classNames(
+          "section-container-border-right",
+
+          "right-section-container",
+          styles.sectionContainer
+        )}
+      >
+        <h1 className={classNames("italic-title", "right-text")}>
+          Browse my Projects
+        </h1>
+        <div className={styles.subtitle}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et itaque
+            recusandae sapiente ex enim at, temporibus, velit ullam quisquam
+            placeat optio dolor blanditiis ipsum eaque doloremque tenetur, vero
+            maxime aperiam!
+          </p>
+        </div>
+      </div>
       <div className={styles.container}>
         {projectsLoaded.map((project) => (
           <img

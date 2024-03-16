@@ -1,6 +1,7 @@
 .container {
   border-left: solid 0.5mm var(--black-light);
   padding-left: 60px;
+  margin-bottom: 10rem;
 }
 @media (max-width: 1430px) {
   .container {
@@ -13,8 +14,7 @@
     margin: 1rem;
   }
 }
-p {
-  font-family: "kanit", sans-serif;
-  font-weight: 400;
+.container p {
   color: var(--black-light);
+  max-width: 70%;
 }

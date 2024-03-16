@@ -35,7 +35,23 @@ body {
   color: var(--black-light);
   margin: 0rem;
 }
-
+.right-text {
+  text-align: right;
+}
+.section-container-border-left {
+  border-left: solid 0.5mm var(--black-light);
+  padding-left: 60px;
+}
+.section-container-border-right {
+  border-right: solid 0.5mm var(--black-light);
+  padding-right: 60px;
+  margin-bottom: 10rem;
+}
+.right-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 li {
   list-style: none;
   color: black;
@@ -43,4 +59,8 @@ li {
 
 a {
   text-decoration: none;
+}
+p {
+  font-family: "kanit", sans-serif;
+  font-weight: 400;
 }
