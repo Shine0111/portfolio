@@ -23,12 +23,38 @@
   max-width: 70%;
 }
 .projectEntryImage {
-  width: 10%;
+  width: 15%;
   margin-bottom: 12%;
   margin-left: 2rem;
   margin-right: 2rem;
-  transition: width ease-in;
+  position: relative;
 }
-.projectEntryImage:hover {
+.projectEntryImage img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 3px 10px 10px 3px;
+  box-shadow: 0px 0px 2px rgb(201, 201, 201), 6px 3px rgb(119, 119, 119), 8px 4px rgb(148, 148, 148);
+  transition: transform 0.3s ease;
+}
+.projectEntryImage img:hover {
   cursor: pointer;
+  transform: translateY(-10px);
+}
+.projectEntryImageMobile {
+  width: 30%;
+  margin-bottom: 12%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: relative;
+}
+.projectEntryImageMobile img {
+  border-radius: 3px 10px 10px 3px;
+  box-shadow: 0px 0px 2px rgb(201, 201, 201), 6px 3px rgb(119, 119, 119), 8px 4px rgb(148, 148, 148);
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.projectEntryImageMobile img:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
 }

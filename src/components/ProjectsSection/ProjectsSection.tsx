@@ -1,6 +1,9 @@
 import classNames from "classnames";
 import styles from "./ProjectsSection.module.css";
-import placeholderImage from "../../assets/placeholder-img.jpg";
+// import placeholderImage from "../../assets/placeholder-img.jpg";
+import cover1 from "../../assets/cover1.webp";
+import cover2 from "../../assets/cover2.webp";
+import cover3 from "../../assets/cover3.jpg";
 import useViewport from "../../hooks/useViewport";
 
 const ProjectsSection = () => {
@@ -12,9 +15,9 @@ const ProjectsSection = () => {
   };
 
   const projects = [
-    { title: "project1", image: placeholderImage },
-    { title: "project2", image: placeholderImage },
-    { title: "project3", image: placeholderImage },
+    { title: "project1", image: cover1 },
+    { title: "project2", image: cover2 },
+    { title: "project3", image: cover3 },
   ];
 
   const projectsLoaded: { title: string; image: string }[] = getProjects();
@@ -42,22 +45,26 @@ const ProjectsSection = () => {
       </div>
       <div className={styles.container}>
         {projectsLoaded.map((project) => (
-          <img
-            key={project.title}
-            src={project.image}
-            alt={project.title}
-            className={styles.projectEntryImage}
-          />
+          <div
+            className={
+              viewWidth > breakpoint
+                ? styles.projectEntryImage
+                : styles.projectEntryImageMobile
+            }
+          >
+            <img key={project.title} src={project.image} alt={project.title} />
+          </div>
         ))}
       </div>
       {viewWidth < breakpoint && (
         <div className={styles.container}>
-          <img
-            key={projects[2].title}
-            src={projects[2].image}
-            alt={projects[2].title}
-            className={styles.projectEntryImage}
-          />
+          <div className={styles.projectEntryImageMobile}>
+            <img
+              key={projects[2].title}
+              src={projects[2].image}
+              alt={projects[2].title}
+            />
+          </div>
         </div>
       )}
     </div>
