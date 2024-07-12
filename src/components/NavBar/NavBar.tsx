@@ -21,8 +21,6 @@ function NavBar() {
 
   const getStickyClassName = isScrolling ? "sticky" : "";
 
-  console.log(isScrolling);
-
   return (
     <div className={classNames(styles.header, getStickyClassName)}>
       <div

@@ -1,26 +1,24 @@
 import classNames from "classnames";
 import styles from "./ProjectsSection.module.css";
-// import placeholderImage from "../../assets/placeholder-img.jpg";
-import cover1 from "../../assets/cover1.webp";
-import cover2 from "../../assets/cover2.webp";
-import cover3 from "../../assets/cover3.jpg";
+import { projects } from "../../data/data.ts";
 import useViewport from "../../hooks/useViewport";
+import { useNavigate } from "react-router-dom";
 
 const ProjectsSection = () => {
   const { viewWidth, breakpoint } = useViewport();
+  const navigate = useNavigate();
+
+  const handleProjectClick = (id: number) => {
+    navigate(`/project/${id}`);
+  };
 
   const getProjects = () => {
     if (viewWidth < breakpoint) return [projects[0], projects[1]];
     return projects;
   };
 
-  const projects = [
-    { title: "project1", image: cover1 },
-    { title: "project2", image: cover2 },
-    { title: "project3", image: cover3 },
-  ];
-
-  const projectsLoaded: { title: string; image: string }[] = getProjects();
+  const projectsLoaded: { id: number; title: string; image: string }[] =
+    getProjects();
   return (
     <div className={classNames("container-max-width-wider")}>
       <div
@@ -44,7 +42,7 @@ const ProjectsSection = () => {
         </div>
       </div>
       <div className={styles.container}>
-        {projectsLoaded.map((project) => (
+        {projectsLoaded.map((project, index) => (
           <div
             className={
               viewWidth > breakpoint
@@ -52,7 +50,12 @@ const ProjectsSection = () => {
                 : styles.projectEntryImageMobile
             }
           >
-            <img key={project.title} src={project.image} alt={project.title} />
+            <img
+              key={project.id}
+              src={project.image}
+              alt={project.title}
+              onClick={() => handleProjectClick(index)}
+            />
           </div>
         ))}
       </div>
@@ -63,6 +66,7 @@ const ProjectsSection = () => {
               key={projects[2].title}
               src={projects[2].image}
               alt={projects[2].title}
+              onClick={() => handleProjectClick(2)}
             />
           </div>
         </div>
