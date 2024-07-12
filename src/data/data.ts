@@ -9,6 +9,7 @@ export interface Project {
   category: string;
   author: string;
   summary: string;
+  url: string;
 }
 
 const projects: Project[] = [
@@ -20,6 +21,7 @@ const projects: Project[] = [
     author: "Shine Randriamialison",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi! lsdjkf sldkfj lsdkfj lskdjf lskjdflksj dflks dflkjsldkfjlksd fjlks jdflks jdlfk slkdfjlksjd flks jdflk jslkdfjlskdjflksdj flks dlfkjslkdf jlksdjflks jdlkf lskdf jlskdf jlks dflks jdflk jslkdfjlksd jflk sdflk sdlkf jlskd fjlksd jflks djflk sjdlfk jslkdf jlksd jflksd fjlksdj flks jdflks jdflkjsdflk slkdfjlks fls Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi! lsdjkf sldkfj lsdkfj lskdjf lskjdflksj dflks dflkjsldkfjlksd fjlks jdflks jdlfk slkdfjlksjd flks jdflk jslkdfjlskdjflksdj flks dlfkjslkdf jlksdjflks jdlkf lskdf jlskdf jlks dflks jdflk jslkdfjlksd jflk sdflk sdlkf jlskd fjlksd jflks djflk sjdlfk jslkdf jlksd jflksd fjlksdj flks jdflks jdflkjsdflk slkdfjlks fls Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi! lsdjkf sldkfj lsdkfj lskdjf lskjdflksj dflks dflkjsldkfjlksd fjlks jdflks jdlfk slkdfjlksjd flks jdflk jslkdfjlskdjflksdj flks dlfkjslkdf jlksdjflks jdlkf lskdf jlskdf jlks dflks jdflk jslkdfjlksd jflk sdflk sdlkf jlskd fjlksd jflks djflk sjdlfk jslkdf jlksd jflksd fjlksdj flks jdflks jdflkjsdflk slkdfjlks fls Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi! lsdjkf sldkfj lsdkfj lskdjf lskjdflksj dflks dflkjsldkfjlksd fjlks jdflks jdlfk slkdfjlksjd flks jdflk jslkdfjlskdjflksdj flks dlfkjslkdf jlksdjflks jdlkf lskdf jlskdf jlks dflks jdflk jslkdfjlksd jflk sdflk sdlkf jlskd fjlksd jflks djflk sjdlfk jslkdf jlksd jflksd fjlksdj flks jdflks jdflkjsdflk slkdfjlks fls Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi! lsdjkf sldkfj lsdkfj lskdjf lskjdflksj dflks dflkjsldkfjlksd fjlks jdflks jdlfk slkdfjlksjd flks jdflk jslkdfjlskdjflksdj flks dlfkjslkdf jlksdjflks jdlkf lskdf jlskdf jlks dflks jdflk jslkdfjlksd jflk sdflk sdlkf jlskd fjlksd jflks djflk sjdlfk jslkdf jlksd jflksd fjlksdj flks jdflks jdflkjsdflk slkdfjlks fls",
+    url: "https://pikla-landing-page.vercel.app/",
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ const projects: Project[] = [
     author: "Shine Randriamialison",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi!",
+    url: "https://game-hub-pink-ten.vercel.app/",
   },
   {
     id: 3,
@@ -38,6 +41,7 @@ const projects: Project[] = [
     author: "Shine Randriamialison",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autcorrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur, tenetur neque eveniet. Aut praesentium consequatur accusamus magnam blanditiis excepturi!",
+    url: "https://shine0111.github.io/tambaBe/",
   },
 ];
 

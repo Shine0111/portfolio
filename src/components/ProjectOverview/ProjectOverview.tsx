@@ -37,7 +37,7 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
           {viewWidth > 768 && (
             <div
               className={styles.button}
-              onClick={() => window.open("https://www.google.com", "_blank")}
+              onClick={() => window.open(project?.url, "_blank")}
             >
               Demo
             </div>
@@ -49,7 +49,14 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
           <p>{project?.summary}</p>
         </div>
         <div>
-          {viewWidth <= 768 && <div className={styles.button}>Demo</div>}
+          {viewWidth <= 768 && (
+            <div
+              className={styles.button}
+              onClick={() => window.open(project?.url, "_blank")}
+            >
+              Demo
+            </div>
+          )}
         </div>
       </div>
     </div>
