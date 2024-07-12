@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={classNames("hero-container-max-width")}>
         <div className={styles.footerFooter}>
           <p>
-            This website is designed and developed by <i>me,</i>
+            This website was designed and developed by <i>me,</i>
           </p>
           <img src={signature} alt="Shine" className={styles.signature} />
         </div>
