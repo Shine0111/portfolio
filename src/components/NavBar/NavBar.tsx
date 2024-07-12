@@ -14,6 +14,7 @@ function NavBar() {
   // Close mobile Menu when window width gets larger
   useEffect(() => {
     if (viewWidth > breakpoint) setIsMenu(true);
+    if (viewWidth < breakpoint) setIsMenu(true);
   }, [viewWidth, breakpoint]);
   const handleMenuButton = () => {
     setIsMenu(!isMenu);
