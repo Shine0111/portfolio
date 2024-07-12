@@ -19,8 +19,14 @@
     .navigatorContainer {
         flex-direction: column-reverse;
         justify-content: center;
-        position: sticky;
+        position: inherit;
         top: 4em;
+    }
+}
+
+@media (width <=1000px) {
+    .navigatorContainer {
+        position: inherit;
     }
 }
 
@@ -81,6 +87,15 @@
     border-radius: 100px;
     padding: 10px 0px 10px 0px;
     box-shadow: 0.1px 0.1px 4px rgb(196, 196, 196);
+}
+
+.buttonMobile {
+    text-align: center;
+    background-color: var(--blue);
+    border-radius: 100px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: 0.1px 0.1px 4px rgb(196, 196, 196);
+    width: 240px;
 }
 
 .button:hover {

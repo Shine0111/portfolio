@@ -51,7 +51,7 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
         <div>
           {viewWidth <= 768 && (
             <div
-              className={styles.button}
+              className={styles.buttonMobile}
               onClick={() => window.open(project?.url, "_blank")}
             >
               Demo
