@@ -13,8 +13,8 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
   const navigate = useNavigate();
   const { viewWidth } = useViewport();
   return (
-    <div className={classNames("container-max-width", styles.container)}>
-      <div className={styles.navigatorContainer}>
+    <div className={classNames(styles.container)}>
+      <div className={classNames(styles.navigatorContainer)}>
         <div className={styles.backContainer}>
           <MdArrowBackIos
             onClick={() => navigate("/")}

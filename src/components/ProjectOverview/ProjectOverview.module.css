@@ -1,7 +1,5 @@
 .container {
-    padding-top: 4em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-top: 3em;
 }
 
 .navigatorContainer {
@@ -9,6 +7,8 @@
     justify-content: space-between;
     position: sticky;
     backdrop-filter: blur(10px);
+    padding-left: 4em;
+    padding-right: 4em;
     top: 4em;
 }
 
@@ -20,9 +20,10 @@
     .navigatorContainer {
         flex-direction: column-reverse;
         justify-content: center;
+
         position: sticky;
-        backdrop-filter: blur(10px);
-        top: 4em;
+        backdrop-filter: blur(7px);
+        padding: 4px;
     }
 }
 
@@ -30,12 +31,14 @@
     .navigatorContainer {
         position: sticky;
         backdrop-filter: blur(10px);
+        top: 4em;
     }
 }
 
 .pathContainer {
     display: flex;
     align-items: center;
+    position: relative;
     gap: 1em;
 }
 
