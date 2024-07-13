@@ -102,4 +102,5 @@ p {
 .sticky {
   position: fixed;
   width: 100%;
+  backdrop-filter: blur(10px);
 }
