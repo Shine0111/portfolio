@@ -23,7 +23,8 @@
 
         position: sticky;
         backdrop-filter: blur(7px);
-        padding: 4px;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }
 
@@ -32,6 +33,12 @@
         position: sticky;
         backdrop-filter: blur(10px);
         top: 4em;
+    }
+}
+
+@media (width <=320px) {
+    .navigatorContainer {
+        top: 5em;
     }
 }
 
@@ -51,6 +58,7 @@
     display: flex;
     padding-left: 3em;
     padding-right: 3em;
+    padding-top: 2em;
     gap: 3em;
 }
 
