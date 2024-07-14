@@ -30,7 +30,7 @@ function HomePage() {
         </div>
         {viewWidth > 1168 && (
           <div className={styles.svgContainer}>
-            <img src={heroImage} alt="hero" />
+            <img src={heroImage} alt="hero" className={styles.heroImage} />
           </div>
         )}
       </div>

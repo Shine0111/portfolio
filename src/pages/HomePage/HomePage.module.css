@@ -20,7 +20,6 @@
   }
 
   .svg-container {
-    padding-top: 2%;
     flex: 1;
   }
 }
@@ -30,6 +29,10 @@
     margin: 0;
     padding-top: 7%;
   }
+}
+
+.heroImage {
+  width: 88%;
 }
 
 .hero-title {
