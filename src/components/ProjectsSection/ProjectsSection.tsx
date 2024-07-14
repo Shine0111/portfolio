@@ -49,24 +49,23 @@ const ProjectsSection = () => {
                 ? styles.projectEntryImage
                 : styles.projectEntryImageMobile
             }
+            onClick={() => handleProjectClick(index)}
           >
-            <img
-              key={project.id}
-              src={project.image}
-              alt={project.title}
-              onClick={() => handleProjectClick(index)}
-            />
+            <img key={project.id} src={project.image} alt={project.title} />
           </div>
         ))}
       </div>
+
       {viewWidth < breakpoint && (
         <div className={styles.container}>
-          <div className={styles.projectEntryImageMobile}>
+          <div
+            className={styles.projectEntryImageMobile}
+            onClick={() => handleProjectClick(2)}
+          >
             <img
               key={projects[2].title}
               src={projects[2].image}
               alt={projects[2].title}
-              onClick={() => handleProjectClick(2)}
             />
           </div>
         </div>

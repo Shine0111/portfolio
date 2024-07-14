@@ -31,7 +31,8 @@
   margin-bottom: 12%;
   margin-left: 2rem;
   margin-right: 2rem;
-  z-index: -1;
+  transition: transform 0.3s ease;
+  position: static;
 }
 
 .projectEntryImage img {
@@ -39,11 +40,10 @@
   object-fit: contain;
   border-radius: 3px 10px 10px 3px;
   box-shadow: 0px 0px 2px rgb(201, 201, 201), 6px 3px rgb(119, 119, 119), 8px 4px rgb(148, 148, 148);
-  transition: transform 0.3s ease;
-  position: relative;
+  z-index: -1;
 }
 
-.projectEntryImage img:hover {
+.projectEntryImage:hover {
   cursor: pointer;
   transform: translateY(-10px);
 }
@@ -53,8 +53,8 @@
   margin-bottom: 12%;
   margin-left: 2rem;
   margin-right: 2rem;
-  position: relative;
-  z-index: -1;
+  position: static;
+  transition: transform 0.3s ease;
 }
 
 .projectEntryImageMobile img {
@@ -62,10 +62,9 @@
   box-shadow: 0px 0px 2px rgb(201, 201, 201), 6px 3px rgb(119, 119, 119), 8px 4px rgb(148, 148, 148);
   width: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
 }
 
-.projectEntryImageMobile img:hover {
+.projectEntryImageMobile:hover {
   cursor: pointer;
   transform: translateY(-10px);
 }
