@@ -72,7 +72,7 @@
     }
 }
 
-.imageContainer img {
+.projectCover {
     width: 210px;
     height: 320px;
     border-radius: 0px 10px 10px 0px;
@@ -98,11 +98,32 @@
 }
 
 .button {
+    width: 100%;
     text-align: center;
     background-color: var(--blue);
     border-radius: 100px;
-    padding: 10px 0px 10px 0px;
-    box-shadow: 0.1px 0.1px 4px rgb(196, 196, 196);
+    margin-bottom: 10px;
+    border: 1px solid #6b6b6b;
+}
+
+.buttonGithub {
+    background-color: rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -2px;
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid #6b6b6b;
+}
+
+.buttonGithub:hover {
+    cursor: pointer;
+}
+
+.buttonGithub img {
+    width: 30px;
+    height: 30px;
 }
 
 .buttonMobile {
@@ -116,4 +137,8 @@
 
 .button:hover {
     cursor: pointer;
+}
+
+.technologiesContainer {
+    display: flex;
 }
