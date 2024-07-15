@@ -4,7 +4,7 @@ import { Project } from "../../data/data";
 import classNames from "classnames";
 import { MdArrowBackIos } from "react-icons/md";
 import useViewport from "../../hooks/useViewport";
-import github from "../../assets/icons8-github.svg";
+import github from "../../assets/icons8-githubcropped.svg-removebg-preview.png";
 
 interface ProjectOverviewProps {
   project: Project;
@@ -74,12 +74,21 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
         </div>
         <div>
           {viewWidth <= 768 && (
-            <div
-              className={styles.buttonMobile}
-              onClick={() => window.open(project?.url, "_blank")}
-            >
-              Demo
-            </div>
+            <>
+              <button
+                className={styles.buttonMobile}
+                onClick={() => window.open(project?.url, "_blank")}
+              >
+                Demo
+              </button>
+              <button
+                className={styles.buttonGithubMobile}
+                onClick={() => window.open(project?.githubUrl, "_blank")}
+              >
+                <img src={github} />
+                Repository
+              </button>
+            </>
           )}
         </div>
       </div>

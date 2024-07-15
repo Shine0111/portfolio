@@ -60,6 +60,7 @@
     padding-right: 3em;
     padding-top: 2em;
     gap: 3em;
+    margin: auto;
 }
 
 @media (width > 768px) {
@@ -68,6 +69,9 @@
         top: 10em;
         align-self: flex-start;
         height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
     }
 }
@@ -98,7 +102,7 @@
 }
 
 .button {
-    width: 100%;
+    width: 240px;
     text-align: center;
     background-color: var(--blue);
     border-radius: 100px;
@@ -111,10 +115,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: -2px;
-    width: 100%;
+    width: 240px;
     border-radius: 100px;
     border: 1px solid #6b6b6b;
+    margin: 1px;
+    /* padding-top: 4px;
+    padding-bottom: 4px; */
+    /* padding-left: 7px;
+    padding-right: 7px; */
+}
+
+.buttonGithubMobile {
+    background-color: rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    border-radius: 100px;
+    border: 1px solid #6b6b6b;
+    margin: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.buttonGithubMobile:hover {
+    cursor: pointer;
 }
 
 .buttonGithub:hover {
@@ -122,17 +147,24 @@
 }
 
 .buttonGithub img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.buttonGithubMobile img {
+    width: 20px;
+    height: 20px;
 }
 
 .buttonMobile {
     text-align: center;
     background-color: var(--blue);
     border-radius: 100px;
-    padding: 10px 0px 10px 0px;
-    box-shadow: 0.1px 0.1px 4px rgb(196, 196, 196);
     width: 240px;
+    border: 1px solid #6b6b6b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 4px;
 }
 
 .button:hover {
