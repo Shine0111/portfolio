@@ -40,7 +40,10 @@ function NavBar() {
           <HamburgerButton open={isMenu} onClick={handleMenuButton} />
         )}
       </div>
-      {isMenu || (viewWidth < breakpoint && <NavMenu mobile />)}
+      {isMenu ||
+        (viewWidth < breakpoint && (
+          <NavMenu onClickEvent={() => setIsMenu(!isMenu)} mobile />
+        ))}
     </div>
   );
 }

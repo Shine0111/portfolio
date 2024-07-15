@@ -20,7 +20,7 @@ const ProjectsSection = () => {
   const projectsLoaded: { id: number; title: string; image: string }[] =
     getProjects();
   return (
-    <div className={classNames("container-max-width-wider")}>
+    <div id="projects" className={classNames("container-max-width-wider")}>
       <div
         className={classNames(
           "section-container-border-right",

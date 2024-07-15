@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div>
+    <div id="contact">
       <div className={styles.titleContainer}>
         <h2 className={classNames(styles.title, "italic-title")}>
           Get in touch

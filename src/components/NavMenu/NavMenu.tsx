@@ -5,9 +5,10 @@ import useViewport from "../../hooks/useViewport";
 
 interface Props {
   mobile?: boolean;
+  onClickEvent?: () => void;
 }
 
-const NavMenu = ({ mobile }: Props) => {
+const NavMenu = ({ mobile, onClickEvent }: Props) => {
   const location = useLocation();
   const { viewWidth } = useViewport();
 
@@ -26,15 +27,15 @@ const NavMenu = ({ mobile }: Props) => {
     <div>
       <ul className={getClassName()}>
         <a href="/">
-          <li>HOME</li>
+          <li onClick={() => onClickEvent?.()}>HOME</li>
         </a>
-        <a href="">
+        <a href="/#about" onClick={() => onClickEvent?.()}>
           <li>ABOUT</li>
         </a>
-        <a href="">
+        <a href="/#projects" onClick={() => onClickEvent?.()}>
           <li>PROJECTS</li>
         </a>
-        <a href="">
+        <a href="/#contact" onClick={() => onClickEvent?.()}>
           <li>CONTACT</li>
         </a>
       </ul>
