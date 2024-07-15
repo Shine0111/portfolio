@@ -5,6 +5,7 @@ import GlitchText from "../../components/GlicthText/GlitchText";
 import heroImage from "../../assets/portfolio-hero-v1.svg";
 import About from "../../components/About/About";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
+import Contact from "../../components/Contact/Contact";
 
 function HomePage() {
   const { viewWidth } = useViewport();
@@ -28,7 +29,7 @@ function HomePage() {
             and bring creative ideas to life on the web and on mobiles.
           </h2>
         </div>
-        {viewWidth > 1168 && (
+        {viewWidth > 1100 && (
           <div className={styles.svgContainer}>
             <img src={heroImage} alt="hero" className={styles.heroImage} />
           </div>
@@ -36,6 +37,7 @@ function HomePage() {
       </div>
       <About />
       <ProjectsSection />
+      <Contact />
     </>
   );
 }

@@ -25,7 +25,7 @@ const NavMenu = ({ mobile }: Props) => {
   return (
     <div>
       <ul className={getClassName()}>
-        <a href="">
+        <a href="/">
           <li>HOME</li>
         </a>
         <a href="">

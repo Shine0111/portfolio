@@ -5,11 +5,13 @@ import NavMenu from "../NavMenu/NavMenu";
 import { useEffect, useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import useScrollDetector from "../../hooks/useScrollDetector";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const { viewWidth, breakpoint } = useViewport();
   const isScrolling = useScrollDetector();
   const [isMenu, setIsMenu] = useState(false);
+  const navigate = useNavigate();
 
   // Close mobile Menu when window width gets larger
   useEffect(() => {
@@ -30,7 +32,9 @@ function NavBar() {
           "hero-container-max-width"
         )}
       >
-        <h2 className={styles.logoText}>Shine Randriamialison</h2>
+        <h2 className={styles.logoText} onClick={() => navigate("/")}>
+          Shine Randriamialison
+        </h2>
         {viewWidth >= breakpoint && <NavMenu />}
         {viewWidth < breakpoint && (
           <HamburgerButton open={isMenu} onClick={handleMenuButton} />

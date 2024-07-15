@@ -1,0 +1,48 @@
+.formContainer {
+    background: radial-gradient(circle, #fdf4e3 40%, #d4a373 100%);
+    border: 1px solid #d4a373;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Times New Roman', Times, serif;
+    color: #5b4636;
+    position: relative;
+    overflow: hidden;
+    max-width: 70%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.formContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2) 100%);
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+
+@media (width < 600) {
+    .formContainer {}
+}
+
+.titleContainer {
+    border-left: solid 0.5mm var(--black-light);
+    padding-left: 60px;
+}
+
+@media (max-width: 1430px) {
+    .titleContainer {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding: var(--container-padding);
+    }
+}
+
+.formContainer h2 {
+    font-size: 50px;
+}

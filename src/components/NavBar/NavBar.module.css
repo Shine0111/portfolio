@@ -17,3 +17,7 @@
   font-weight: lighter;
   letter-spacing: 1.5px;
 }
+
+.logoText:hover {
+  cursor: pointer;
+}
