@@ -50,44 +50,61 @@ const Contact: React.FC = () => {
   return (
     <div>
       <div className={styles.titleContainer}>
-        <h2 className="italic-title">Get in touch</h2>
+        <h2 className={classNames(styles.title, "italic-title")}>
+          Get in touch
+        </h2>
       </div>
-      <div className={classNames("container-max-width", styles.formContainer)}>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
+      <div className={styles.contactContainer}>
+        <div
+          className={classNames("container-max-width", styles.formContainer)}
+        >
+          <form onSubmit={handleSubmit}>
+            <div className={styles.formGroup}>
+              <label htmlFor="name" className={styles.label}>
+                <p>Name:</p>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className={styles.input}
+                required
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="email" className={styles.label}>
+                <p>Email:</p>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className={styles.input}
+                required
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="message" className={styles.label}>
+                <p>Message:</p>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className={classNames(styles.input, styles.textarea)}
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className={styles.submitButton}>
+              Send
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
