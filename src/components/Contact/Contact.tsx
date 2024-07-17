@@ -15,6 +15,8 @@ const Contact: React.FC = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isMailSent, setIsMailSent] = useState<boolean>(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,6 +32,8 @@ const Contact: React.FC = () => {
       message: formData.message,
     };
 
+    setIsLoading(true);
+
     emailjs
       .send(
         import.meta.env.VITE_EMAIL_SERVICE_ID,
@@ -40,15 +44,19 @@ const Contact: React.FC = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
+          setIsLoading(false);
+          setIsMailSent(true);
         },
         (err) => {
           console.log("FAILED...", err);
+          setIsLoading(false);
+          setIsMailSent(false);
         }
       );
   };
 
   return (
-    <div id="contact">
+    <div id="contact" className="container-max-width">
       <div className={styles.titleContainer}>
         <h2 className={classNames(styles.title, "italic-title")}>
           Get in touch
@@ -100,8 +108,13 @@ const Contact: React.FC = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className={styles.submitButton}>
-              Send
+            <button
+              type="submit"
+              className={styles.submitButton}
+              disabled={isMailSent ? true : false}
+            >
+              {isLoading && <span className="loader"></span>}
+              {!isLoading && <span>{isMailSent ? "Sent" : "Send"}</span>}
             </button>
           </form>
         </div>

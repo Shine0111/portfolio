@@ -99,6 +99,7 @@
     font-family: "kanit", sans-serif;
     transition: background-color 0.3s ease;
     margin: 0 auto;
+    width: 100px;
 }
 
 .submitButton:hover {
