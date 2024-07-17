@@ -2,6 +2,7 @@ import classNames from "classnames";
 import styles from "./NavMenu.module.css";
 import { useLocation } from "react-router-dom";
 import useViewport from "../../hooks/useViewport";
+import { Link } from "react-router-dom";
 
 interface Props {
   mobile?: boolean;
@@ -25,7 +26,7 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
 
   return (
     <div>
-      <ul className={getClassName()}>
+      {/* <ul className={getClassName()}>
         <a href="/">
           <li onClick={() => onClickEvent?.()}>HOME</li>
         </a>
@@ -38,7 +39,21 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
         <a href="/#contact" onClick={() => onClickEvent?.()}>
           <li>CONTACT</li>
         </a>
-      </ul>
+      </ul> */}
+      <div className={getClassName()}>
+        <Link to="/" onClick={onClickEvent}>
+          HOME
+        </Link>
+        <Link to="/#about" onClick={onClickEvent}>
+          ABOUT
+        </Link>
+        <Link to="/#projects" onClick={onClickEvent}>
+          PROJECTS
+        </Link>
+        <Link to="/#contact" onClick={onClickEvent}>
+          CONTACT
+        </Link>
+      </div>
     </div>
   );
 };
