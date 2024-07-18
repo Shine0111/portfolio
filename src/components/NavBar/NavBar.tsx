@@ -34,7 +34,13 @@ function NavBar() {
           "hero-container-max-width"
         )}
       >
-        <h2 className={styles.logoText} onClick={() => navigate("/")}>
+        <h2
+          className={styles.logoText}
+          onClick={() => {
+            navigate("/");
+            setHash("#home");
+          }}
+        >
           Shine Randriamialison
         </h2>
         {viewWidth >= breakpoint && (
