@@ -6,13 +6,30 @@ import heroImage from "../../assets/portfolio-hero-v1.svg";
 import About from "../../components/About/About";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import Contact from "../../components/Contact/Contact";
+import { useRef, useEffect } from "react";
+import { useHash } from "../../contexts/HashContext";
 
 function HomePage() {
   const { viewWidth } = useViewport();
   const roles = ["front-end developer", "javascript developer"];
+
+  const { hash, setHash } = useHash();
+
+  const homeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (hash === "#home") {
+      homeRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    return () => setHash("");
+  }, [hash, setHash]);
   return (
     <>
-      <div className={classNames("hero-container-max-width", styles.container)}>
+      <div
+        className={classNames("hero-container-max-width", styles.container)}
+        ref={homeRef}
+      >
         <div className={styles.heroTextContainer}>
           <h1 className={styles.heroTitle}>
             Hi, my <br /> name is <span className={styles.name}>Shine</span>

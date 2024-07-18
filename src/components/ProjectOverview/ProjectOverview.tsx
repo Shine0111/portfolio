@@ -13,6 +13,7 @@ interface ProjectOverviewProps {
 const ProjectOverview = ({ project }: ProjectOverviewProps) => {
   const navigate = useNavigate();
   const { viewWidth } = useViewport();
+
   return (
     <div className={classNames(styles.container)}>
       <div className={classNames(styles.navigatorContainer)}>

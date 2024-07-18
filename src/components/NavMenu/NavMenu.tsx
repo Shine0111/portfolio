@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 interface Props {
   mobile?: boolean;
-  onClickEvent?: () => void;
+  onClickEvent?: (hash: string) => void;
 }
 
 const NavMenu = ({ mobile, onClickEvent }: Props) => {
@@ -22,6 +22,12 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
       [styles.menuUrlsContainerMobileLowerLower]:
         mobile && location.pathname !== "/" && viewWidth < 768,
     });
+  };
+
+  const handleLinkClick = (hash: string) => {
+    if (onClickEvent) {
+      onClickEvent(hash);
+    }
   };
 
   return (
@@ -41,16 +47,16 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
         </a>
       </ul> */}
       <div className={getClassName()}>
-        <Link to="/" onClick={onClickEvent}>
+        <Link to="/" onClick={() => handleLinkClick("#home")}>
           HOME
         </Link>
-        <Link to="/#about" onClick={onClickEvent}>
+        <Link to="/#about" onClick={() => handleLinkClick("#about")}>
           ABOUT
         </Link>
-        <Link to="/#projects" onClick={onClickEvent}>
+        <Link to="/#projects" onClick={() => handleLinkClick("#projects")}>
           PROJECTS
         </Link>
-        <Link to="/#contact" onClick={onClickEvent}>
+        <Link to="/#contact" onClick={() => handleLinkClick("#contact")}>
           CONTACT
         </Link>
       </div>

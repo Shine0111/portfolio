@@ -3,10 +3,22 @@ import styles from "./ProjectsSection.module.css";
 import { projects } from "../../data/data.ts";
 import useViewport from "../../hooks/useViewport";
 import { useNavigate } from "react-router-dom";
+import { useRef, useEffect } from "react";
+import { useHash } from "../../contexts/HashContext.tsx";
 
 const ProjectsSection = () => {
   const { viewWidth, breakpoint } = useViewport();
   const navigate = useNavigate();
+  const { hash, setHash } = useHash();
+  const projectsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (hash === "#projects") {
+      projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    return () => setHash("");
+  }, [hash, setHash]);
 
   const handleProjectClick = (id: number) => {
     navigate(`/project/${id}`);
@@ -20,7 +32,11 @@ const ProjectsSection = () => {
   const projectsLoaded: { id: number; title: string; image: string }[] =
     getProjects();
   return (
-    <div id="projects" className={classNames("container-max-width-wider")}>
+    <div
+      id="projects"
+      className={classNames("container-max-width-wider")}
+      ref={projectsRef}
+    >
       <div
         className={classNames(
           "section-container-border-right",

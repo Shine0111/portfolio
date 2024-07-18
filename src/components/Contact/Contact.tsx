@@ -1,7 +1,8 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import classNames from "classnames";
 import styles from "./Contact.module.css";
+import { useHash } from "../../contexts/HashContext";
 
 interface FormData {
   name: string;
@@ -17,6 +18,17 @@ const Contact: React.FC = () => {
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isMailSent, setIsMailSent] = useState<boolean>(false);
+  const { hash, setHash } = useHash();
+
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (hash === "#contact") {
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    return () => setHash("");
+  }, [hash, setHash]);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -56,7 +68,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="container-max-width">
+    <div id="contact" className="container-max-width" ref={contactRef}>
       <div className={styles.titleContainer}>
         <h2 className={classNames(styles.title, "italic-title")}>
           Get in touch

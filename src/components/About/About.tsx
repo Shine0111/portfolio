@@ -1,11 +1,25 @@
 import styles from "./About.module.css";
 import classNames from "classnames";
+import { useEffect, useRef } from "react";
+import { useHash } from "../../contexts/HashContext";
 
 const About = () => {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const { hash, setHash } = useHash();
+
+  useEffect(() => {
+    if (hash === "#about") {
+      aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    return () => setHash("");
+  }, [hash, setHash]);
+
   return (
     <div
       className={classNames("container-max-width", styles.container)}
       id="about"
+      ref={aboutRef}
     >
       <h1 className="italic-title">About Me</h1> <br />
       <p>

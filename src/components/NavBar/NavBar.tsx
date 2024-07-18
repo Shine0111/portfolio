@@ -6,12 +6,14 @@ import { useEffect, useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import useScrollDetector from "../../hooks/useScrollDetector";
 import { useNavigate } from "react-router-dom";
+import { useHash } from "../../contexts/HashContext";
 
 function NavBar() {
   const { viewWidth, breakpoint } = useViewport();
   const isScrolling = useScrollDetector();
   const [isMenu, setIsMenu] = useState(false);
   const navigate = useNavigate();
+  const { setHash } = useHash();
 
   // Close mobile Menu when window width gets larger
   useEffect(() => {
@@ -35,14 +37,22 @@ function NavBar() {
         <h2 className={styles.logoText} onClick={() => navigate("/")}>
           Shine Randriamialison
         </h2>
-        {viewWidth >= breakpoint && <NavMenu />}
+        {viewWidth >= breakpoint && (
+          <NavMenu onClickEvent={(hash) => setHash(hash)} />
+        )}
         {viewWidth < breakpoint && (
           <HamburgerButton open={isMenu} onClick={handleMenuButton} />
         )}
       </div>
       {isMenu ||
         (viewWidth < breakpoint && (
-          <NavMenu onClickEvent={() => setIsMenu(!isMenu)} mobile />
+          <NavMenu
+            onClickEvent={(hash) => {
+              setIsMenu(!isMenu);
+              setHash(hash);
+            }}
+            mobile
+          />
         ))}
     </div>
   );
