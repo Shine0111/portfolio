@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { MdArrowBackIos } from "react-icons/md";
 import useViewport from "../../hooks/useViewport";
 import github from "../../assets/icons8-githubcropped.svg-removebg-preview.png";
+import Divider from "../Divider/Divider";
 
 interface ProjectOverviewProps {
   project: Project;
@@ -64,12 +65,24 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
             {project?.author}
           </p>
           <p>{project?.summary}</p>
+          <Divider color="var(--blue)" thickness={1.5} />
           <div className={styles.technologiesContainer}>
-            <h3>Technologies :</h3>
-            {project?.technologies.map((technology) => (
-              <div className={styles.technologyContainer}>
+            <h3>Technologies:</h3>
+            {project?.technologies.map((technology, index) => (
+              <div className={styles.technologyContainer} key={index}>
                 <img src={technology.icon} alt={technology.technology} />
               </div>
+            ))}
+          </div>
+          <div
+            style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}
+          >
+            <h3>Challenges: </h3>
+            {project?.challenges.map((challenge, index) => (
+              <span key={index}>
+                {challenge}
+                {index !== project.challenges.length - 1 ? ", " : ""}
+              </span>
             ))}
           </div>
         </div>

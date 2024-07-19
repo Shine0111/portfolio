@@ -17,6 +17,7 @@ export interface Project {
   url: string;
   githubUrl: string;
   technologies: Technologies[];
+  challenges: string[];
 }
 
 interface Technologies {
@@ -57,6 +58,7 @@ const projects: Project[] = [
         icon: html,
       },
     ],
+    challenges: ["Accordion", "Page state through navigation"],
   },
   {
     id: 2,
@@ -90,6 +92,7 @@ const projects: Project[] = [
         icon: css,
       },
     ],
+    challenges: ["Data from server management", "Consuming Third-Party API"],
   },
   {
     id: 3,
@@ -114,6 +117,10 @@ const projects: Project[] = [
         technology: "CSS",
         icon: css,
       },
+    ],
+    challenges: [
+      "Object Oriented Programming",
+      "Following a moving object on a canvas",
     ],
   },
 ];
