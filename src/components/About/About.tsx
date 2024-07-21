@@ -9,7 +9,11 @@ const About = () => {
 
   useEffect(() => {
     if (hash === "#about") {
-      aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+      aboutRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
     }
 
     return () => setHash("");

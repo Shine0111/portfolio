@@ -14,7 +14,11 @@ const ProjectsSection = () => {
 
   useEffect(() => {
     if (hash === "#projects") {
-      projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+      projectsRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
     }
 
     return () => setHash("");

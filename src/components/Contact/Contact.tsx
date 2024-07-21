@@ -24,7 +24,11 @@ const Contact: React.FC = () => {
 
   useEffect(() => {
     if (hash === "#contact") {
-      contactRef.current?.scrollIntoView({ behavior: "smooth" });
+      contactRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
     }
 
     return () => setHash("");
