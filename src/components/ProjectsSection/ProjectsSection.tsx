@@ -53,12 +53,7 @@ const ProjectsSection = () => {
           Browse my Projects
         </h1>
         <div className={styles.subtitle}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et itaque
-            recusandae sapiente ex enim at, temporibus, velit ullam quisquam
-            placeat optio dolor blanditiis ipsum eaque doloremque tenetur, vero
-            maxime aperiam!
-          </p>
+          <p>Projects Crafted with Precision and Imagination</p>
         </div>
       </div>
       <div className={styles.container}>

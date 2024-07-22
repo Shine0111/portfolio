@@ -27,10 +27,14 @@ const About = () => {
     >
       <h1 className="italic-title">About Me</h1> <br />
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aut
-        corrupti dolorum hic ipsam porro, qui voluptates, nesciunt ut pariatur,
-        tenetur neque eveniet. Aut praesentium consequatur accusamus magnam
-        blanditiis excepturi!
+        Welcome to my little corner of the internet.🌟
+        <br />
+        <br /> Picture this: a young kid, aged 10, stumbling upon a treasure
+        trove of HTML and CSS secrets in a dusty PDF book. Fast forward to
+        today, and that curious kid has evolved into a Web emotional (that's
+        me!). <br />
+        <br /> Know that each line of code and design choice is a love letter to
+        my passion for reading and coding. 📖❤️
       </p>
     </div>
   );

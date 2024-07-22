@@ -23,7 +23,6 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
             onClick={() => navigate("/")}
             className={styles.backIcon}
           />
-
           <h4>{project?.title}</h4>
         </div>
         <div className={styles.pathContainer}>
@@ -61,10 +60,19 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
             onClick={() =>
               window.open("https://github.com/Shine0111", "_blank")
             }
+            className={styles.authorLink}
           >
             {project?.author}
           </p>
           <p>{project?.summary}</p>
+          <Divider color="var(--blue)" thickness={1.5} />
+          <div className={styles.additionalInfoContainer}>
+            <h3>Motivation:</h3>
+            <p>{project?.motivation}</p>
+            <Divider color="var(--blue)" thickness={1.5} />
+            <h3>Future Plans:</h3>
+            <p>{project?.futurePlans}</p>
+          </div>
           <Divider color="var(--blue)" thickness={1.5} />
           <div className={styles.technologiesContainer}>
             <h3>Technologies:</h3>

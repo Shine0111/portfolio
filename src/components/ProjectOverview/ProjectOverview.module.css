@@ -91,13 +91,13 @@
     }
 }
 
-.projectDetailsContainer p:first-of-type {
+.authorLink {
     color: var(--blue);
     text-decoration: underline;
     font-style: italic;
 }
 
-.projectDetailsContainer p:first-of-type:hover {
+.authorLink:hover {
     cursor: pointer;
 }
 
@@ -175,4 +175,16 @@
 .technologiesContainer {
     display: flex;
     gap: 7px;
+}
+
+.additionalInfoContainer {
+    margin-top: 20px;
+}
+
+.additionalInfoContainer h3 {
+    margin-bottom: 10px;
+}
+
+.additionalInfoContainer p {
+    margin-bottom: 20px;
 }
