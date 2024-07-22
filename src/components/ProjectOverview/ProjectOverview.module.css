@@ -187,7 +187,7 @@
     border-radius: 0.25em;
     white-space: nowrap;
 
-    /* Position the tooltip */
+    /* Position the text*/
     position: absolute;
     z-index: 1;
     transition-property: visibility;

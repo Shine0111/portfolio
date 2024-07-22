@@ -4,6 +4,7 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes.tsx";
 import { HashProvider } from "./contexts/HashContext.tsx";
+import "@theme-toggles/react/css/Around.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <HashProvider>

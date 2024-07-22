@@ -3,6 +3,12 @@ import styles from "./NavMenu.module.css";
 import { useLocation } from "react-router-dom";
 import useViewport from "../../hooks/useViewport";
 import { Link } from "react-router-dom";
+import {
+  enableDarkMode,
+  isDarkReaderEnabled,
+  disableDarkMode,
+} from "../../configs/darkmode.js";
+import { Around } from "@theme-toggles/react";
 
 interface Props {
   mobile?: boolean;
@@ -30,22 +36,21 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
     }
   };
 
+  const toggleDarkMode = () => {
+    const isEnabled = isDarkReaderEnabled();
+    if (!isEnabled) {
+      enableDarkMode({
+        brightness: 100,
+        contrast: 100,
+        sepia: 10,
+      });
+    } else {
+      disableDarkMode();
+    }
+  };
+
   return (
     <div>
-      {/* <ul className={getClassName()}>
-        <a href="/">
-          <li onClick={() => onClickEvent?.()}>HOME</li>
-        </a>
-        <a href="/#about" onClick={() => onClickEvent?.()}>
-          <li>ABOUT</li>
-        </a>
-        <a href="/#projects" onClick={() => onClickEvent?.()}>
-          <li>PROJECTS</li>
-        </a>
-        <a href="/#contact" onClick={() => onClickEvent?.()}>
-          <li>CONTACT</li>
-        </a>
-      </ul> */}
       <div className={getClassName()}>
         <Link to="/" onClick={() => handleLinkClick("#home")}>
           HOME
@@ -59,6 +64,11 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
         <Link to="/#contact" onClick={() => handleLinkClick("#contact")}>
           CONTACT
         </Link>
+        <Around
+          duration={750}
+          placeholder={"theme"}
+          onClickCapture={toggleDarkMode}
+        />
       </div>
     </div>
   );
