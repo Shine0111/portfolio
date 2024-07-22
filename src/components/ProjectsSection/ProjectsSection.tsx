@@ -70,6 +70,7 @@ const ProjectsSection = () => {
                 : styles.projectEntryImageMobile
             }
             onClick={() => handleProjectClick(index)}
+            key={project.id}
           >
             <img key={project.id} src={project.image} alt={project.title} />
           </div>

@@ -35,7 +35,7 @@
 }
 
 .formContainer {
-    background: radial-gradient(circle, #fdf4e3 40%, #d4a373 100%);
+    background: radial-gradient(circle, #fff6e3bd 40%, #b97836 100%);
     border: 1px solid #d4a373;
     padding: 20px;
     border-radius: 10px;
