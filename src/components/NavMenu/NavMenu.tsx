@@ -50,7 +50,7 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
   };
 
   return (
-    <div>
+    <div className={styles.superContainer}>
       <div className={getClassName()}>
         <Link to="/" onClick={() => handleLinkClick("#home")}>
           HOME
