@@ -1,11 +1,12 @@
-import cover1 from "../assets/cover1.webp";
-import cover2 from "../assets/cover2.webp";
-import cover3 from "../assets/cover3.jpg";
+import piklaLandingCover from "../assets/pikla-landing-cover.png";
+import gameHubCover from "../assets/game-hub-cover.png";
+import tambaBeCover from "../assets/TambaBe-cover.png";
 import javascript from "../assets/icons8-javascript.svg";
 import typescript from "../assets/icons8-typescript.svg";
 import html from "../assets/icons8-html.svg";
 import css from "../assets/icons8-css.svg";
 import react from "../assets/icons8-react.svg";
+import chakraUi from "../assets/icons8-chakra-ui.svg";
 
 export interface Project {
   id: number;
@@ -29,7 +30,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Pikla Landing Page",
-    image: cover1,
+    image: piklaLandingCover,
     category: "website",
     author: "Shine Randriamialison",
     summary:
@@ -57,13 +58,17 @@ const projects: Project[] = [
         technology: "HTML",
         icon: html,
       },
+      {
+        technology: "ChakraUI",
+        icon: chakraUi,
+      },
     ],
     challenges: ["Accordion", "Page state through navigation"],
   },
   {
     id: 2,
     title: "GameHub",
-    image: cover2,
+    image: gameHubCover,
     category: "website",
     author: "Shine Randriamialison",
     summary:
@@ -97,7 +102,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Tamba Be",
-    image: cover3,
+    image: tambaBeCover,
     category: "website",
     author: "Shine Randriamialison",
     summary:

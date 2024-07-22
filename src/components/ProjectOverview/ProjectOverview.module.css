@@ -174,4 +174,5 @@
 
 .technologiesContainer {
     display: flex;
+    gap: 7px;
 }

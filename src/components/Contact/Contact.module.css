@@ -1,7 +1,6 @@
 .contactContainer {
-    width: 50%;
-    margin-left: auto;
-    margin-right: 60px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 @media (width < 815px) {

@@ -75,7 +75,12 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
             ))}
           </div>
           <div
-            style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              gap: "7px",
+            }}
           >
             <h3>Challenges: </h3>
             {project?.challenges.map((challenge, index) => (
