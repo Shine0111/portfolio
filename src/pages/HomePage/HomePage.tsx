@@ -25,6 +25,11 @@ function HomePage() {
 
     return () => setHash("");
   }, [hash, setHash]);
+
+  // const downloadResume = () => {
+  //   window.location.href = "../../docs/Resume.pdf";
+  // };
+
   return (
     <>
       <div
@@ -46,11 +51,12 @@ function HomePage() {
             {""} <br />
             and bring creative ideas to life on the web and on mobiles.
           </h2>
-
-          <button className={styles.resumeButton}>
-            <p>Resume</p>
-            <img src={downloadIcon} alt="Download resume" />
-          </button>
+          <a href="src\docs\Resume.pdf" download="Resume" target="_blank">
+            <button className={styles.resumeButton}>
+              <p>Resume</p>
+              <img src={downloadIcon} alt="Download resume" />
+            </button>
+          </a>
         </div>
         {viewWidth > 1100 && (
           <div className={classNames(styles.svgContainer)}>
