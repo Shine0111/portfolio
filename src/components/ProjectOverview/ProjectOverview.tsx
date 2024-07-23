@@ -16,7 +16,7 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
   const { viewWidth } = useViewport();
 
   return (
-    <div className={classNames(styles.container, "container-max-width")}>
+    <div className={classNames(styles.container)}>
       <div className={classNames(styles.navigatorContainer)}>
         <div className={styles.backContainer}>
           <MdArrowBackIos

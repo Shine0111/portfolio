@@ -1,5 +1,6 @@
 .container {
     padding-top: 3em;
+    width: 100vw;
 }
 
 .navigatorContainer {
@@ -20,8 +21,6 @@
     .navigatorContainer {
         flex-direction: column-reverse;
         justify-content: center;
-
-        position: sticky;
         backdrop-filter: blur(7px);
         padding-left: 2em;
         padding-right: 2em;
@@ -30,17 +29,10 @@
 
 @media (width <=1000px) {
     .navigatorContainer {
-        position: sticky;
-        backdrop-filter: blur(10px);
         top: 4em;
     }
 }
 
-@media (width <=320px) {
-    .navigatorContainer {
-        top: 5em;
-    }
-}
 
 .pathContainer {
     display: flex;
@@ -60,7 +52,6 @@
     padding-right: 3em;
     padding-top: 2em;
     gap: 3em;
-    margin: auto;
 }
 
 @media (width > 768px) {
@@ -82,6 +73,13 @@
     border-radius: 0px 10px 10px 0px;
     box-shadow: 2px 2px 5px gray;
     margin-bottom: 1.5rem;
+}
+
+@media (width <=377) {
+    .projectCover {
+        width: 200px;
+        height: 310px;
+    }
 }
 
 @media (width <=768px) {
