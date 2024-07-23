@@ -102,13 +102,13 @@
 }
 
 .submitButton {
-    background-color: #e0af7f;
+    background-color: #dbb288;
     color: white;
     border: none;
     padding: 0.75rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 100px;
     font-family: "kanit", sans-serif;
     transition: background-color 0.3s ease;
     margin: 0 auto;
@@ -116,5 +116,5 @@
 }
 
 .submitButton:hover {
-    background-color: #ba8b5a;
+    background-color: #ffc68a;
 }
