@@ -7,7 +7,7 @@ import {
   enableDarkMode,
   isDarkReaderEnabled,
   disableDarkMode,
-} from "../../configs/darkmode.js";
+} from "../../configs/darkmode";
 import { Around } from "@theme-toggles/react";
 
 interface Props {
