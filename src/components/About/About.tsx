@@ -34,7 +34,7 @@ const About = () => {
         today, and that curious kid has evolved into a Web emotional (that's
         me!). <br />
         <br /> Know that each line of code and design choice is a love letter to
-        my passion for reading and coding. 📖❤️
+        my passion for reading and coding.
       </p>
     </div>
   );

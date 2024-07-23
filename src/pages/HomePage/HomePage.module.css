@@ -1,67 +1,93 @@
-.container {
-  padding: var(--container-padding);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-top: 5%;
-}
-
-.hero-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media only screen and (min-width: 769px) {
   .container {
+    padding: var(--container-padding);
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 5%;
   }
 
-  .svg-container {
-    flex: 1;
+  .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-}
 
-@media screen and (max-width: 769px) {
+  @media only screen and (min-width: 769px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .svg-container {
+      flex: 1;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    .hero-title {
+      margin: 0;
+      padding-top: 7%;
+    }
+  }
+
+  .heroImage {
+    width: 88%;
+  }
+
   .hero-title {
-    margin: 0;
-    padding-top: 7%;
+    font-weight: lighter;
+    font-size: 100px;
+    color: var(--black-light);
+    line-height: 90px;
   }
-}
 
-.heroImage {
-  width: 88%;
-}
+  .styled-point {
+    color: var(--violet);
+  }
 
-.hero-title {
-  font-weight: lighter;
-  font-size: 100px;
-  color: var(--black-light);
-  line-height: 90px;
-}
+  .name {
+    font-weight: bold;
+    font-style: italic;
+  }
 
-.styled-point {
-  color: var(--violet);
-}
+  .description {
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--black-light);
+  }
 
-.name {
-  font-weight: bold;
-  font-style: italic;
-}
+  .role {
+    color: var(--blue);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
 
-.description {
-  font-size: 26px;
-  font-weight: 500;
-  color: var(--black-light);
-}
+  .role::selection {
+    background-color: var(--violet-dark);
+  }
 
-.role {
-  color: var(--blue);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
+  .resumeButton {
+    height: 2.5rem;
+    width: 10rem;
+    border: none;
+    box-shadow: 0.7px 0.7px 2px 0.2px rgba(0, 0, 0, 0.404);
+    border-radius: 4px;
+    background-color: chocolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-left: 8px;
+  }
 
-.role::selection {
-  background-color: var(--violet-dark);
-}
+  .resumeButton p {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .resumeButton img {
+    width: 30px;
+  }

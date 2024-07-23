@@ -8,6 +8,7 @@ import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import Contact from "../../components/Contact/Contact";
 import { useRef, useEffect } from "react";
 import { useHash } from "../../contexts/HashContext";
+import downloadIcon from "../../assets/icons8-download-64.png";
 
 function HomePage() {
   const { viewWidth } = useViewport();
@@ -45,6 +46,11 @@ function HomePage() {
             {""} <br />
             and bring creative ideas to life on the web and on mobiles.
           </h2>
+
+          <button className={styles.resumeButton}>
+            <p>Resume</p>
+            <img src={downloadIcon} alt="Download resume" />
+          </button>
         </div>
         {viewWidth > 1100 && (
           <div className={classNames(styles.svgContainer)}>
