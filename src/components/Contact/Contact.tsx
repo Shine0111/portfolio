@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import classNames from "classnames";
 import styles from "./Contact.module.css";
 import { useHash } from "../../contexts/HashContext";
+import { isDarkReaderEnabled } from "../../configs/darkmode";
 
 interface FormData {
   name: string;
@@ -80,7 +81,14 @@ const Contact: React.FC = () => {
       </div>
       <div className={styles.contactContainer}>
         <div
-          className={classNames("container-max-width", styles.formContainer)}
+          className={classNames(
+            "container-max-width",
+            `${
+              isDarkReaderEnabled()
+                ? styles.formContainerDark
+                : styles.formContainer
+            }`
+          )}
         >
           <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>

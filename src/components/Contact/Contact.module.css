@@ -48,6 +48,20 @@
     margin-bottom: 2em;
 }
 
+.formContainerDark {
+    background: #b97836;
+    border: 1px solid #d4a373;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Times New Roman', Times, serif;
+    color: #5b4636;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 /* .formContainer::before {
     content: '';
     position: absolute;
