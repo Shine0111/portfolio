@@ -38,7 +38,18 @@ function HomePage() {
       >
         <div className={styles.heroTextContainer}>
           <h1 className={styles.heroTitle}>
-            Hi, my <br /> name is <span className={styles.name}>Shine</span>
+            Hi,{" "}
+            {viewWidth > 325 && (
+              <span>
+                my <br /> name is
+              </span>
+            )}{" "}
+            {viewWidth < 325 && (
+              <span>
+                I'm <br />
+              </span>
+            )}
+            <span className={styles.name}>Shine</span>
             <span className={styles.styledPoint}>.</span>
           </h1>
           <h2 className={styles.description}>
