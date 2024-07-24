@@ -51,7 +51,11 @@ function HomePage() {
             {""} <br />
             and bring creative ideas to life on the web and on mobiles.
           </h2>
-          <a href="src\docs\Resume.pdf" download="Resume" target="_blank">
+          <a
+            href="src\docs\React Developer.pdf"
+            download="Resume"
+            target="_blank"
+          >
             <button className={styles.resumeButton}>
               <p>Resume</p>
               <img src={downloadIcon} alt="Download resume" />
