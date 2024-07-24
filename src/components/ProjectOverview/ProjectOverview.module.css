@@ -80,8 +80,8 @@
 
 @media (width <=377) {
     .projectCover {
-        width: 200px;
-        height: 310px;
+        width: 190px;
+        height: 300px;
     }
 }
 
@@ -177,6 +177,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
+}
+
+@media (width <=500px) {
+    .technologiesContainer {
+        flex-direction: column;
+    }
 }
 
 /* Mouseover text */

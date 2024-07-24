@@ -76,14 +76,20 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
           <Divider color="var(--blue)" thickness={1.5} />
           <div className={styles.technologiesContainer}>
             <h3>Technologies:</h3>
-            {project?.technologies.map((technology, index) => (
-              <div className={styles.technologyContainer} key={index}>
-                <img src={technology.icon} alt={technology.technology} />
-                <span className={styles.onHoverText}>
-                  {technology.technology}
-                </span>
-              </div>
-            ))}
+            <div className={styles.technologyContainer}>
+              {project?.technologies.map((technology, index) => (
+                <>
+                  <img
+                    src={technology.icon}
+                    alt={technology.technology}
+                    key={index}
+                  />
+                  <span className={styles.onHoverText}>
+                    {technology.technology}
+                  </span>
+                </>
+              ))}
+            </div>
           </div>
           <div
             style={{
