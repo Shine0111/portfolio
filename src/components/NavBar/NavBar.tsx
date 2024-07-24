@@ -4,13 +4,11 @@ import classNames from "classnames";
 import NavMenu from "../NavMenu/NavMenu";
 import { useEffect, useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
-import useScrollDetector from "../../hooks/useScrollDetector";
 import { useNavigate } from "react-router-dom";
 import { useHash } from "../../contexts/HashContext";
 
 function NavBar() {
   const { viewWidth, breakpoint } = useViewport();
-  const isScrolling = useScrollDetector();
   const [isMenu, setIsMenu] = useState(false);
   const navigate = useNavigate();
   const { setHash } = useHash();
@@ -24,10 +22,8 @@ function NavBar() {
     setIsMenu(!isMenu);
   };
 
-  const getStickyClassName = isScrolling ? "sticky" : "";
-
   return (
-    <div className={classNames(styles.header, getStickyClassName)}>
+    <div className={classNames(styles.header, "sticky")}>
       <div
         className={classNames(
           styles.navbarContainer,
