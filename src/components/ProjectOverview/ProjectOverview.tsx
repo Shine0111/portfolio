@@ -81,16 +81,16 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
             <h3>Technologies:</h3>
             <div className={styles.technologyContainer}>
               {project?.technologies.map((technology, index) => (
-                <>
+                <div className={styles.tech}>
+                  <span className={styles.onHoverText}>
+                    {technology.technology}
+                  </span>
                   <img
                     src={technology.icon}
                     alt={technology.technology}
                     key={index}
                   />
-                  <span className={styles.onHoverText}>
-                    {technology.technology}
-                  </span>
-                </>
+                </div>
               ))}
             </div>
           </div>

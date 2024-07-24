@@ -28,10 +28,6 @@ function HomePage() {
     return () => setHash("");
   }, [hash, setHash]);
 
-  // const downloadResume = () => {
-  //   window.location.href = "../../docs/Resume.pdf";
-  // };
-
   return (
     <>
       <div
