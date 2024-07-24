@@ -53,6 +53,10 @@
     gap: 3em;
 }
 
+.projectDetailsContainer {
+    /* width: 100vw; */
+}
+
 @media (width > 768px) {
     .imageContainer {
         position: sticky;

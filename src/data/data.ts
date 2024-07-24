@@ -35,8 +35,7 @@ const projects: Project[] = [
     image: piklaLandingCover,
     category: "website",
     author: "Shine Randriamialison",
-    summary:
-      "This project showcases a highly complex landing page designed to serve as the entry point for a multi-functional application. Imagine an app that can handle everything from purchasing products to booking a taxi or even managing your laundry services. The landing page is crafted to present a vast amount of information in an organized and user-friendly manner.",
+    summary: "This project showcases a highly complex ",
     motivation:
       "Creating a landing page for such a versatile application posed a unique challenge: how to present extensive information without overwhelming the user. This project was an opportunity to leverage my skills in React to solve this problem effectively, ensuring a seamless and intuitive user experience.",
     futurePlans:
