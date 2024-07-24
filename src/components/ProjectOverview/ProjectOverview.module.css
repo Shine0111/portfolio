@@ -172,6 +172,7 @@
 
 .technologiesContainer {
     display: flex;
+    flex-wrap: wrap;
     gap: 7px;
 }
 
