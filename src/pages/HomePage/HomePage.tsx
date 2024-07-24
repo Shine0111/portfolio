@@ -61,7 +61,7 @@ function HomePage() {
             and bring creative ideas to life on the web and on mobiles.
           </h2>
           <a
-            href="src\assets\React Developer.pdf"
+            href="https://www.dropbox.com/scl/fi/dv1cq5li78e2h7stce10x/React-Developer.pdf?rlkey=xa76lhb2hg6zoqa1uyx801x8p&st=pflx043r&dl=0"
             download="Resume"
             target="_blank"
           >
