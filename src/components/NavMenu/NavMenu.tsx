@@ -68,6 +68,7 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
           duration={750}
           placeholder={"theme"}
           onClickCapture={toggleDarkMode}
+          style={{ marginLeft: "auto" }}
         />
       </div>
     </div>

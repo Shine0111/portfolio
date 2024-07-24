@@ -1,3 +1,4 @@
+import { isDarkReaderEnabled } from "../../configs/darkmode";
 import styles from "./HamburgerButton.module.css";
 
 interface Props {
@@ -12,7 +13,12 @@ const HamburgerButton = ({ open, onClick }: Props) => {
         open ? styles.hamburgerMenu : `${styles.hamburgerMenu} ${styles.open}`
       }
     >
-      <button className={styles.menuIcon} onClick={onClick}>
+      <button
+        className={
+          isDarkReaderEnabled?.() ? styles.menuIconWhite : styles.menuIcon
+        }
+        onClick={onClick}
+      >
         <span></span>
         <span></span>
         <span></span>
