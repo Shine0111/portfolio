@@ -61,7 +61,7 @@ function HomePage() {
             and bring creative ideas to life on the web and on mobiles.
           </h2>
           <a
-            href="src\docs\React Developer.pdf"
+            href="src\assets\React Developer.pdf"
             download="Resume"
             target="_blank"
           >
