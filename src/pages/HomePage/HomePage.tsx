@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./HomePage.module.css";
 import useViewport from "../../hooks/useViewport";
 import GlitchText from "../../components/GlicthText/GlitchText";
-import heroImage from "../../assets/portfolio-hero-v1.svg";
+import heroImage from "../../assets/man-desktop-computer-publicdomainvectors.org 1 (2).svg";
 import About from "../../components/About/About";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import Contact from "../../components/Contact/Contact";
