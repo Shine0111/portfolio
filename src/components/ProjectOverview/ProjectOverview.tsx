@@ -13,7 +13,10 @@ interface ProjectOverviewProps {
 
 const ProjectOverview = ({ project }: ProjectOverviewProps) => {
   const navigate = useNavigate();
+
   const { viewWidth } = useViewport();
+
+  document.title = `Project | ${project?.title}`;
 
   return (
     <div className={classNames(styles.container, "container-max-width-wider")}>

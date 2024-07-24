@@ -14,6 +14,8 @@ function HomePage() {
   const { viewWidth } = useViewport();
   const roles = ["front-end developer", "javascript developer"];
 
+  document.title = "Shine | Frontend Developer";
+
   const { hash, setHash } = useHash();
 
   const homeRef = useRef<HTMLDivElement>(null);
