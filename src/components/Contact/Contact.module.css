@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+.titleContainer {
+    margin-top: 3rem;
+}
+
 @media (width < 815px) {
     .contactContainer {
         margin: 0 auto;
