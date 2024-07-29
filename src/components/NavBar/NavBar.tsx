@@ -2,7 +2,7 @@ import useViewport from "../../hooks/useViewport";
 import styles from "./NavBar.module.css";
 import classNames from "classnames";
 import NavMenu from "../NavMenu/NavMenu";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import { useNavigate } from "react-router-dom";
 import { useHash } from "../../contexts/HashContext";
@@ -12,6 +12,7 @@ function NavBar() {
   const [isMenu, setIsMenu] = useState(false);
   const navigate = useNavigate();
   const { setHash } = useHash();
+  const navMenuRef = useRef<HTMLDivElement>(null);
 
   // Close mobile Menu when window width gets larger
   useEffect(() => {
@@ -21,6 +22,14 @@ function NavBar() {
   const handleMenuButton = () => {
     setIsMenu(!isMenu);
   };
+
+  // Close menu when clicked outside
+  // useEffect(() => {
+  //   document.addEventListener("click", () => setIsMenu(false));
+  //   return () => {
+  //     document.removeEventListener("click", () => setIsMenu(false));
+  //   };
+  // }, []);
 
   return (
     <div className={classNames(styles.header, "sticky")}>
@@ -40,7 +49,7 @@ function NavBar() {
           Shine Randriamialison
         </h2>
         {viewWidth >= breakpoint && (
-          <NavMenu onClickEvent={(hash) => setHash(hash)} />
+          <NavMenu onClickEvent={(hash) => setHash(hash)} ref={navMenuRef} />
         )}
         {viewWidth < breakpoint && (
           <HamburgerButton open={isMenu} onClick={handleMenuButton} />
@@ -49,6 +58,7 @@ function NavBar() {
       {isMenu ||
         (viewWidth < breakpoint && (
           <NavMenu
+            ref={navMenuRef}
             onClickEvent={(hash) => {
               setIsMenu(!isMenu);
               setHash(hash);

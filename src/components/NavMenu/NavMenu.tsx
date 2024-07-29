@@ -9,13 +9,15 @@ import {
   disableDarkMode,
 } from "../../configs/darkmode";
 import { Around } from "@theme-toggles/react";
+import { RefObject } from "react";
 
 interface Props {
   mobile?: boolean;
   onClickEvent?: (hash: string) => void;
+  ref: RefObject<HTMLDivElement>;
 }
 
-const NavMenu = ({ mobile, onClickEvent }: Props) => {
+const NavMenu = ({ mobile, onClickEvent, ref }: Props) => {
   const location = useLocation();
   const { viewWidth } = useViewport();
 
@@ -50,7 +52,7 @@ const NavMenu = ({ mobile, onClickEvent }: Props) => {
   };
 
   return (
-    <div className={styles.superContainer}>
+    <div className={styles.superContainer} ref={ref}>
       <div className={getClassName()}>
         <Link to="/" onClick={() => handleLinkClick("#home")}>
           HOME
